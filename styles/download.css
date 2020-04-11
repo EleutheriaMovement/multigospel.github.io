@@ -1,0 +1,45 @@
+
+.button {
+  margin: 10em auto 0;
+  display: inline-block;
+  font-size: 1.15em;
+  position: relative;
+  text-align: center;
+  padding: 0.5em 1em;
+  background: linear-gradient(45deg, #59adeb, #40c3af);
+  color: #fff;
+  box-shadow: 0 0.2em 0.2em rgba(0,0,0,0.25);
+  border-radius: 0.2em;
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+.button:active {
+  background-color: #ccc;
+  box-shadow: 0 0 6px rgba(0,121,238,0.6);
+  transition: box-shadow 0.1s ease-in-out;
+}
+.button:after {
+  content: "\0021e7";
+  position: absolute;
+  top: -0.4em;
+  left: 0;
+  right: 0;
+  display: block;
+  transform: rotate(180deg);
+  font-size: 5em;
+  opacity: 0;
+  text-shadow: 0 0 1em #000;
+  transition: opacity 0.3s ease-in-out, font-size 0.3s ease-in-out, top 0.3s ease-in-out;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+}
+.button:active:after {
+  font-size: 1em;
+  opacity: 1;
+  transition: none;
+  top: 0.3em;
+}
+.button:hover {
+  box-shadow: 0 0.1em 0.25em rgba(0,0,0,0.25);
+}
